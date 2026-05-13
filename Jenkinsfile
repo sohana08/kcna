@@ -1,18 +1,22 @@
 pipeline {
     agent any    
     stages {
-        stage('kcna') {
+
+        stage('Build') {
             steps {
-                echo "You are doing good, poll scm"
+                echo "Building"
             }
         }
-        
-        stage('change') {
+
+        stage('Test') {
             steps {
-                sh '''
-                    ls
-                    cat file2
-                '''
+                echo "testing"
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "deploying"
             }
         }
     }
